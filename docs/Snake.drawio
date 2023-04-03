@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2023-04-03T08:59:01.147Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="eHrhjqVIU90_b-dFZ35Z" version="21.1.2" type="device" pages="2">
+<mxfile host="Electron" modified="2023-04-03T09:48:33.781Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="a26BhPuHDfaCW-kde359" version="21.1.2" type="device" pages="2">
   <diagram name="Sequenz" id="B21jgjWOHXaZNQW184HR">
     <mxGraphModel dx="1050" dy="629" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
       <root>
@@ -142,52 +142,52 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="SYC3Acl7F9Nns0mdv4js-1" value="SnakeGame" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillStyle=auto;fillColor=default;" parent="1" vertex="1">
-          <mxGeometry x="320" y="120" width="240" height="138" as="geometry" />
+          <mxGeometry x="320" y="120" width="240" height="112" as="geometry" />
         </mxCell>
-        <mxCell id="SYC3Acl7F9Nns0mdv4js-2" value="- gameState: GameState" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="SYC3Acl7F9Nns0mdv4js-1" vertex="1">
+        <mxCell id="SYC3Acl7F9Nns0mdv4js-2" value="+ State: GameState" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="SYC3Acl7F9Nns0mdv4js-1" vertex="1">
           <mxGeometry y="26" width="240" height="26" as="geometry" />
         </mxCell>
         <mxCell id="SYC3Acl7F9Nns0mdv4js-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fillStyle=auto;" parent="SYC3Acl7F9Nns0mdv4js-1" vertex="1">
           <mxGeometry y="52" width="240" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="H2rtNyH02k4fSKuJMjE0-1" value="+ SnakeGame(width: int, length: int)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="SYC3Acl7F9Nns0mdv4js-1">
+        <mxCell id="H2rtNyH02k4fSKuJMjE0-1" value="+ SnakeGame(width: int, length: int)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="SYC3Acl7F9Nns0mdv4js-1" vertex="1">
           <mxGeometry y="60" width="240" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="SYC3Acl7F9Nns0mdv4js-4" value="+ Tick(input: Keys): Void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="SYC3Acl7F9Nns0mdv4js-1" vertex="1">
+        <mxCell id="SYC3Acl7F9Nns0mdv4js-4" value="+ Tick(input: Keys): GameSate" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="SYC3Acl7F9Nns0mdv4js-1" vertex="1">
           <mxGeometry y="86" width="240" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="HoRKHKSvosGfV3KxaiAj-1" value="+ getGameState(): GameState" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="SYC3Acl7F9Nns0mdv4js-1">
+        <mxCell id="HoRKHKSvosGfV3KxaiAj-6" value="GameState" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="640" y="120" width="240" height="138" as="geometry" />
+        </mxCell>
+        <mxCell id="HoRKHKSvosGfV3KxaiAj-7" value="+ Score: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="HoRKHKSvosGfV3KxaiAj-6" vertex="1">
+          <mxGeometry y="26" width="240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="HoRKHKSvosGfV3KxaiAj-10" value="+ GameOver: bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="HoRKHKSvosGfV3KxaiAj-6" vertex="1">
+          <mxGeometry y="52" width="240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="HoRKHKSvosGfV3KxaiAj-12" value="+ Playfield: GameTile[,]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="HoRKHKSvosGfV3KxaiAj-6" vertex="1">
+          <mxGeometry y="78" width="240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="HoRKHKSvosGfV3KxaiAj-8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="HoRKHKSvosGfV3KxaiAj-6" vertex="1">
+          <mxGeometry y="104" width="240" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="HoRKHKSvosGfV3KxaiAj-9" value="+ GameState()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="HoRKHKSvosGfV3KxaiAj-6" vertex="1">
           <mxGeometry y="112" width="240" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="HoRKHKSvosGfV3KxaiAj-6" value="GameState" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="640" y="120" width="160" height="216" as="geometry" />
+        <mxCell id="QDUqcCtXKPpY2WNtxUov-1" value="HSLU FS23 CSA&lt;br&gt;Name: Klassendiagramm&lt;br&gt;Projekt: Snake&lt;br&gt;Gruppe: G10&lt;br&gt;Datum: 03.04.2023&lt;br&gt;Autor: Marc Siegrist,&amp;nbsp;Gallo Joseph" style="rounded=0;whiteSpace=wrap;html=1;fillStyle=auto;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;align=left;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry width="200" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="HoRKHKSvosGfV3KxaiAj-7" value="- score: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="HoRKHKSvosGfV3KxaiAj-6">
+        <mxCell id="Wh4j8rtuOhoYXUTHdPLv-1" value="GameTile" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="360" width="160" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="Wh4j8rtuOhoYXUTHdPLv-9" value="empty" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Wh4j8rtuOhoYXUTHdPLv-1">
           <mxGeometry y="26" width="160" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="HoRKHKSvosGfV3KxaiAj-10" value="- gameOver: bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="HoRKHKSvosGfV3KxaiAj-6">
+        <mxCell id="Wh4j8rtuOhoYXUTHdPLv-10" value="snake" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Wh4j8rtuOhoYXUTHdPLv-1">
           <mxGeometry y="52" width="160" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="HoRKHKSvosGfV3KxaiAj-12" value="- playfield: array" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="HoRKHKSvosGfV3KxaiAj-6">
+        <mxCell id="Wh4j8rtuOhoYXUTHdPLv-2" value="fruit" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Wh4j8rtuOhoYXUTHdPLv-1">
           <mxGeometry y="78" width="160" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="HoRKHKSvosGfV3KxaiAj-8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="HoRKHKSvosGfV3KxaiAj-6">
-          <mxGeometry y="104" width="160" height="8" as="geometry" />
-        </mxCell>
-        <mxCell id="HoRKHKSvosGfV3KxaiAj-9" value="+ GameState()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="HoRKHKSvosGfV3KxaiAj-6">
-          <mxGeometry y="112" width="160" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="HoRKHKSvosGfV3KxaiAj-14" value="+ getScore(): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="HoRKHKSvosGfV3KxaiAj-6">
-          <mxGeometry y="138" width="160" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="HoRKHKSvosGfV3KxaiAj-15" value="+ isGameOver(): bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="HoRKHKSvosGfV3KxaiAj-6">
-          <mxGeometry y="164" width="160" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="HoRKHKSvosGfV3KxaiAj-11" value="+ getPlayfield(): array" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="HoRKHKSvosGfV3KxaiAj-6">
-          <mxGeometry y="190" width="160" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="QDUqcCtXKPpY2WNtxUov-1" value="HSLU FS23 CSA&lt;br&gt;Name: Klassendiagramm&lt;br&gt;Projekt: Snake&lt;br&gt;Gruppe: G10&lt;br&gt;Datum: 03.04.2023&lt;br&gt;Autor: Marc Siegrist,&amp;nbsp;Gallo Joseph" style="rounded=0;whiteSpace=wrap;html=1;fillStyle=auto;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;align=left;verticalAlign=top;" vertex="1" parent="1">
-          <mxGeometry width="200" height="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
