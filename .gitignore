@@ -2,7 +2,5 @@
 .vs/
 *.cache
 *.editorconfig
-*.props
-*.dgspec.json
-*/obj/Debug/
-*/bin/Debug/
+*/obj/
+*/bin/
