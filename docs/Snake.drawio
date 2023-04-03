@@ -1,1 +1,195 @@
-<mxfile host="Electron" modified="2023-03-27T10:47:53.254Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/20.8.16 Chrome/106.0.5249.199 Electron/21.4.0 Safari/537.36" etag="dEvQLlfOROw1hJu3MMi6" version="20.8.16" type="device" pages="2"><diagram name="Sequenz" id="B21jgjWOHXaZNQW184HR">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</diagram><diagram id="ehel4DhyxMhKLgHNmi-s" name="UML">7VZRb5swEP41SNtDpwAJWx8b0m4P7VQtk6Y+XuECXo0P2U6T9NfvDCaE0mhZpbxNQsL33Z3x3fedRRCn1farhrq8oxxlEE3ybRAvgigKJ7MJvxyya5EkumyBQovcB/XAUrxgl+nRtcjRDAItkbSiHoIZKYWZHWCgNW2GYSuSw6/WUOAIWGYgx+gvkdvSo2Fy2Tu+oSjK7tPJbNp6KuiifSmmhJw2B1B8HcSpJrLtqtqmKF33usa0eTdHvPuTaVT2lITlQxpfZfLzzeV3ZSZV/jz9bS78Ls8g177iVIIxCir0p7a7rhdmIyoJiq35ipRdek/INkhRKF5nfBbUDDyjtoLbeOUdlmpGs1LI/BZ2tHYnNhayp86al6TFC28L0u/Jbm29IqJkELF0mQxPGNVoOOa+a0P4CrqD7SDwFoz1QEZSQm3E476MCnQh1JyspcoHrYSUXaWwtuShlCRxnYscV7CW7vy+kVw3bo8yFO5554lBqtDqHYf4hLhTvR+WcOrtzYH0Eo+VB6r7knjFe7UX+617PfDCS+If5BGN5BFEczdHAt0gXblx3NVjqXAPbEOhpifseqWo1c5B+zzUyUfiyh4Vj6khE6q4bWIW0x754RvhIOLclWzGrBR5jsoRTxYstCw7SmsSyjadms354X6mk0+zYMYHT9kOe5sfF65tSoprAdHwiCyhDZqTST8+eGMleOaj5DTio3MRH79B/CuOpWi4aznuLsfwXQRXTJXEntGfjvDFRThiPR6zHr/BsIRHlPdkhBXk9tdt7Cvm/0buUL1ClaiFfftKOJcOZtGJF8CZZDA9Mv+8e0n5Bzf7H/9fA2ejPznx/n/HNcBm/+vR+A7+4OLrPw==</diagram></mxfile>
+<mxfile host="Electron" modified="2023-04-03T08:59:01.147Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="eHrhjqVIU90_b-dFZ35Z" version="21.1.2" type="device" pages="2">
+  <diagram name="Sequenz" id="B21jgjWOHXaZNQW184HR">
+    <mxGraphModel dx="1050" dy="629" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="pCA_wMGK8luPxstzmgIP-48" value="Hintergrund" style="" parent="0" />
+        <mxCell id="pCA_wMGK8luPxstzmgIP-41" value="Game Loop" style="rounded=0;whiteSpace=wrap;html=1;fillStyle=hatch;fillColor=none;dashed=1;dashPattern=8 8;horizontal=0;spacingLeft=0;spacingTop=0;align=center;verticalAlign=top;" parent="pCA_wMGK8luPxstzmgIP-48" vertex="1">
+          <mxGeometry x="40" y="380" width="790" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="pCA_wMGK8luPxstzmgIP-49" value="HSLU FS23 CSA&lt;br&gt;Name: Sequenzdiagramm&lt;br&gt;Projekt: Snake&lt;br&gt;Gruppe: G10&lt;br&gt;Datum: 27.03.2023&lt;br&gt;Autor: Marc Siegrist,&amp;nbsp;Gallo Joseph" style="rounded=0;whiteSpace=wrap;html=1;fillStyle=auto;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;align=left;verticalAlign=top;" parent="pCA_wMGK8luPxstzmgIP-48" vertex="1">
+          <mxGeometry width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="1" value="Diagram" parent="0" />
+        <mxCell id="pCA_wMGK8luPxstzmgIP-2" value="Gamer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="120" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pCA_wMGK8luPxstzmgIP-4" value="" style="endArrow=none;dashed=1;html=1;rounded=0;targetPerimeterSpacing=11;startArrow=none;" parent="1" source="pCA_wMGK8luPxstzmgIP-10" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="590" as="sourcePoint" />
+            <mxPoint x="100" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pCA_wMGK8luPxstzmgIP-6" value="App" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pCA_wMGK8luPxstzmgIP-7" value="SnakeGame" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="720" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pCA_wMGK8luPxstzmgIP-8" value="" style="endArrow=none;dashed=1;html=1;rounded=0;sourcePerimeterSpacing=50;targetPerimeterSpacing=11;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="1000" as="sourcePoint" />
+            <mxPoint x="420" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pCA_wMGK8luPxstzmgIP-9" value="" style="endArrow=none;dashed=1;html=1;rounded=0;targetPerimeterSpacing=11;startArrow=none;" parent="1" source="pCA_wMGK8luPxstzmgIP-18" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="780" y="1000" as="sourcePoint" />
+            <mxPoint x="780" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pCA_wMGK8luPxstzmgIP-11" value="" style="endArrow=none;dashed=1;html=1;rounded=0;sourcePerimeterSpacing=50;" parent="1" target="pCA_wMGK8luPxstzmgIP-10" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="1003.7646484375" as="sourcePoint" />
+            <mxPoint x="100" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pCA_wMGK8luPxstzmgIP-10" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="90" y="230" width="20" height="590" as="geometry" />
+        </mxCell>
+        <mxCell id="pCA_wMGK8luPxstzmgIP-12" value="Start Game" style="endArrow=classic;html=1;rounded=0;sourcePerimeterSpacing=50;targetPerimeterSpacing=11;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" source="pCA_wMGK8luPxstzmgIP-10" target="pCA_wMGK8luPxstzmgIP-15" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="380" as="sourcePoint" />
+            <mxPoint x="390" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pCA_wMGK8luPxstzmgIP-15" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="410" y="230" width="21.38" height="570" as="geometry" />
+        </mxCell>
+        <mxCell id="pCA_wMGK8luPxstzmgIP-16" value="new SnakeGame()" style="endArrow=classic;html=1;rounded=0;sourcePerimeterSpacing=50;targetPerimeterSpacing=11;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" target="pCA_wMGK8luPxstzmgIP-18" edge="1">
+          <mxGeometry x="-0.0018" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="429" y="290" as="sourcePoint" />
+            <mxPoint x="759" y="288" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pCA_wMGK8luPxstzmgIP-19" value="" style="endArrow=none;dashed=1;html=1;rounded=0;startArrow=none;" parent="1" source="pCA_wMGK8luPxstzmgIP-30" target="pCA_wMGK8luPxstzmgIP-18" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="780" y="1000" as="sourcePoint" />
+            <mxPoint x="780" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pCA_wMGK8luPxstzmgIP-18" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="770" y="290" width="20" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pCA_wMGK8luPxstzmgIP-21" value="SnakeGame instance" style="endArrow=classic;html=1;rounded=0;sourcePerimeterSpacing=50;targetPerimeterSpacing=11;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.973;entryY=0.211;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="pCA_wMGK8luPxstzmgIP-18" target="pCA_wMGK8luPxstzmgIP-15" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="920" y="360" as="sourcePoint" />
+            <mxPoint x="440" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pCA_wMGK8luPxstzmgIP-25" value="Tick()" style="endArrow=classic;html=1;rounded=0;sourcePerimeterSpacing=50;targetPerimeterSpacing=11;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" target="pCA_wMGK8luPxstzmgIP-30" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="429" y="440" as="sourcePoint" />
+            <mxPoint x="769" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pCA_wMGK8luPxstzmgIP-31" value="" style="endArrow=none;dashed=1;html=1;rounded=0;sourcePerimeterSpacing=50;" parent="1" target="pCA_wMGK8luPxstzmgIP-30" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="780" y="1000" as="sourcePoint" />
+            <mxPoint x="780" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pCA_wMGK8luPxstzmgIP-30" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="770" y="440" width="20" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pCA_wMGK8luPxstzmgIP-35" value="Game State" style="endArrow=classic;html=1;rounded=0;sourcePerimeterSpacing=50;targetPerimeterSpacing=11;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.935;entryY=0.421;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="pCA_wMGK8luPxstzmgIP-30" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="580" y="600" as="sourcePoint" />
+            <mxPoint x="429.99029999999993" y="499.97" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pCA_wMGK8luPxstzmgIP-37" value="Draw Game State" style="endArrow=classic;html=1;rounded=0;sourcePerimeterSpacing=50;targetPerimeterSpacing=11;entryX=1.12;entryY=0.525;entryDx=0;entryDy=0;entryPerimeter=0;exitX=-0.15;exitY=0.545;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="pCA_wMGK8luPxstzmgIP-15" target="pCA_wMGK8luPxstzmgIP-10" edge="1">
+          <mxGeometry x="0.0014" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="540" as="sourcePoint" />
+            <mxPoint x="340" y="590" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pCA_wMGK8luPxstzmgIP-38" value="Joystick Input" style="endArrow=classic;html=1;rounded=0;sourcePerimeterSpacing=50;targetPerimeterSpacing=11;entryX=-0.15;entryY=0.649;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="pCA_wMGK8luPxstzmgIP-15" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110" y="600" as="sourcePoint" />
+            <mxPoint x="400" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pCA_wMGK8luPxstzmgIP-42" value="Tick()" style="endArrow=classic;html=1;rounded=0;sourcePerimeterSpacing=50;targetPerimeterSpacing=11;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" target="pCA_wMGK8luPxstzmgIP-43" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="429" y="680" as="sourcePoint" />
+            <mxPoint x="769" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pCA_wMGK8luPxstzmgIP-43" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="770" y="680" width="20" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pCA_wMGK8luPxstzmgIP-44" value="Game State (Game Over)" style="endArrow=classic;html=1;rounded=0;sourcePerimeterSpacing=50;targetPerimeterSpacing=11;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1.197;entryY=0.896;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="pCA_wMGK8luPxstzmgIP-43" target="pCA_wMGK8luPxstzmgIP-15" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="580" y="840" as="sourcePoint" />
+            <mxPoint x="460" y="740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pCA_wMGK8luPxstzmgIP-46" value="End Game Screen" style="endArrow=classic;html=1;rounded=0;sourcePerimeterSpacing=50;targetPerimeterSpacing=11;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.966;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="pCA_wMGK8luPxstzmgIP-15" target="pCA_wMGK8luPxstzmgIP-10" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="220" y="840" as="sourcePoint" />
+            <mxPoint x="120" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="ehel4DhyxMhKLgHNmi-s" name="UML">
+    <mxGraphModel dx="1050" dy="629" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="SYC3Acl7F9Nns0mdv4js-1" value="SnakeGame" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillStyle=auto;fillColor=default;" parent="1" vertex="1">
+          <mxGeometry x="320" y="120" width="240" height="138" as="geometry" />
+        </mxCell>
+        <mxCell id="SYC3Acl7F9Nns0mdv4js-2" value="- gameState: GameState" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="SYC3Acl7F9Nns0mdv4js-1" vertex="1">
+          <mxGeometry y="26" width="240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="SYC3Acl7F9Nns0mdv4js-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fillStyle=auto;" parent="SYC3Acl7F9Nns0mdv4js-1" vertex="1">
+          <mxGeometry y="52" width="240" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="H2rtNyH02k4fSKuJMjE0-1" value="+ SnakeGame(width: int, length: int)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="SYC3Acl7F9Nns0mdv4js-1">
+          <mxGeometry y="60" width="240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="SYC3Acl7F9Nns0mdv4js-4" value="+ Tick(input: Keys): Void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="SYC3Acl7F9Nns0mdv4js-1" vertex="1">
+          <mxGeometry y="86" width="240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="HoRKHKSvosGfV3KxaiAj-1" value="+ getGameState(): GameState" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="SYC3Acl7F9Nns0mdv4js-1">
+          <mxGeometry y="112" width="240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="HoRKHKSvosGfV3KxaiAj-6" value="GameState" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="120" width="160" height="216" as="geometry" />
+        </mxCell>
+        <mxCell id="HoRKHKSvosGfV3KxaiAj-7" value="- score: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="HoRKHKSvosGfV3KxaiAj-6">
+          <mxGeometry y="26" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="HoRKHKSvosGfV3KxaiAj-10" value="- gameOver: bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="HoRKHKSvosGfV3KxaiAj-6">
+          <mxGeometry y="52" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="HoRKHKSvosGfV3KxaiAj-12" value="- playfield: array" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="HoRKHKSvosGfV3KxaiAj-6">
+          <mxGeometry y="78" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="HoRKHKSvosGfV3KxaiAj-8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="HoRKHKSvosGfV3KxaiAj-6">
+          <mxGeometry y="104" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="HoRKHKSvosGfV3KxaiAj-9" value="+ GameState()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="HoRKHKSvosGfV3KxaiAj-6">
+          <mxGeometry y="112" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="HoRKHKSvosGfV3KxaiAj-14" value="+ getScore(): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="HoRKHKSvosGfV3KxaiAj-6">
+          <mxGeometry y="138" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="HoRKHKSvosGfV3KxaiAj-15" value="+ isGameOver(): bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="HoRKHKSvosGfV3KxaiAj-6">
+          <mxGeometry y="164" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="HoRKHKSvosGfV3KxaiAj-11" value="+ getPlayfield(): array" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="HoRKHKSvosGfV3KxaiAj-6">
+          <mxGeometry y="190" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="QDUqcCtXKPpY2WNtxUov-1" value="HSLU FS23 CSA&lt;br&gt;Name: Klassendiagramm&lt;br&gt;Projekt: Snake&lt;br&gt;Gruppe: G10&lt;br&gt;Datum: 03.04.2023&lt;br&gt;Autor: Marc Siegrist,&amp;nbsp;Gallo Joseph" style="rounded=0;whiteSpace=wrap;html=1;fillStyle=auto;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry width="200" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
