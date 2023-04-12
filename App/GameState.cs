@@ -19,9 +19,9 @@ namespace App
 
         public bool GameOver { get; private set; }
 
-        public GameTile.Snake[,]
+        public Snake Snake { get; }
 
-        public GameTile.Fruit 
+        public Fruit Fruit { get; private set; }
 
         //Maybe add difficulty to GameState(int width, int length, bool difficultyEasy)? 
         //public bool DifficultEasy { get; private set; }
@@ -39,10 +39,10 @@ namespace App
             //Set initial Snake Position? --> Place it always in the middle
             int initialSnakeX = width / 2;
             int initialSnakeY = length / 2;
-            GameTile.Snake snake = new GameTile.Snake[initialSnakeX, initialSnakeY];
+            Snake = new Snake[initialSnakeX, initialSnakeY];
 
             //Set First Fruit
-            GameTile.Fruit = GenerateInitialFruit(width, length);
+            Fruit = GenerateInitialFruit(width, length);
 
 
         }
@@ -57,20 +57,36 @@ namespace App
             GameOver = true;
         }
 
-        public Fruit GenerateInitialFruit(int width, int length)
+        private Fruit GenerateInitialFruit(int width, int length)
         {
             int fruitX;
             int fruitY;
+            bool fruitOnSnake;
 
             do
             {
                 fruitX = new Random().Next(0, width);
                 fruitY = new Random().Next(0, length);
-                Fruit firstFruit = new GameTile.Fruit[fruitX, fruitY];
 
-            } while (snake != firstFruit);
+                fruitOnSnake = false;
+                foreach (var segment in Snake.Segments)
+                {
+                    if (segment.X == fruitX && segment.Y == fruitY)
+                    {
+                        fruitOnSnake = true;
+                        break;
+                    }
+                }
 
+            } while (fruitOnSnake);
 
+            return new Fruit(fruitX, fruitY);
         }
+
+    }
+
+    internal class Snake
+    {
+
     }
 }
