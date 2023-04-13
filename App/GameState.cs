@@ -39,7 +39,7 @@ namespace App
             //Set initial Snake Position? --> Place it always in the middle
             int initialSnakeX = width / 2;
             int initialSnakeY = length / 2;
-            Snake = new Snake[initialSnakeX, initialSnakeY];
+            Snake = new Snake();
 
             //Set First Fruit
             Fruit = GenerateInitialFruit(width, length);
@@ -82,11 +82,6 @@ namespace App
 
             return new Fruit(fruitX, fruitY);
         }
-
-    }
-
-    internal class Snake
-    {
 
     }
 }

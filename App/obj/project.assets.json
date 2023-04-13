@@ -1076,19 +1076,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Marc\\.nuget\\packages\\": {}
+    "C:\\Users\\Joseph Gallo School\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Marc\\Documents\\HSLU\\CSA\\Workspace\\pi-snake\\App\\App.csproj",
+      "projectUniqueName": "C:\\temp\\pi_snake\\App\\App.csproj",
       "projectName": "App",
-      "projectPath": "C:\\Users\\Marc\\Documents\\HSLU\\CSA\\Workspace\\pi-snake\\App\\App.csproj",
-      "packagesPath": "C:\\Users\\Marc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Marc\\Documents\\HSLU\\CSA\\Workspace\\pi-snake\\App\\obj\\",
+      "projectPath": "C:\\temp\\pi_snake\\App\\App.csproj",
+      "packagesPath": "C:\\Users\\Joseph Gallo School\\.nuget\\packages\\",
+      "outputPath": "C:\\temp\\pi_snake\\App\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Marc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Joseph Gallo School\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1102,8 +1107,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Marc\\Documents\\HSLU\\CSA\\Workspace\\pi-snake\\Explorer700Library\\Explorer700Library.csproj": {
-              "projectPath": "C:\\Users\\Marc\\Documents\\HSLU\\CSA\\Workspace\\pi-snake\\Explorer700Library\\Explorer700Library.csproj"
+            "C:\\temp\\pi_snake\\Explorer700Library\\Explorer700Library.csproj": {
+              "projectPath": "C:\\temp\\pi_snake\\Explorer700Library\\Explorer700Library.csproj"
             }
           }
         }
@@ -1133,7 +1138,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,6 +1,7 @@
 ﻿using Explorer700Library;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,9 @@ namespace App
         public SnakeGame(int width, int length)
         {
             State = new GameState(width, length);
+
+            Explorer700 exp = new Explorer700();
+            Graphics g = exp.Display.Graphics;
 
             // Draw the borders of the game screen
             Graphics g = exp.Display.Graphics;
@@ -54,3 +58,4 @@ namespace App
         }
     }
 }
+
