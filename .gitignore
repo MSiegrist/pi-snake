@@ -4,3 +4,4 @@
 *.editorconfig
 */obj/
 */bin/
+*.bkp
