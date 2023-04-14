@@ -15,47 +15,106 @@ namespace App
         public SnakeGame(int width, int length)
         {
             State = new GameState(width, length);
-
-            Explorer700 exp = new Explorer700();
-            Graphics g = exp.Display.Graphics;
-
-            // Draw the borders of the game screen
-            Graphics g = exp.Display.Graphics;
-            Pen pen = new Pen(Brushes.White);
-
-            // Draw top border
-            g.DrawLine(pen, 0, 0, width * GameTile.Size, 0);
-
-            // Draw right border
-            g.DrawLine(pen, width * GameTile.Size, 0, width * GameTile.Size, length * GameTile.Size);
-
-            // Draw bottom border
-            g.DrawLine(pen, 0, length * GameTile.Size, width * GameTile.Size, length * GameTile.Size);
-
-            // Draw left border
-            g.DrawLine(pen, 0, 0, 0, length * GameTile.Size);
-
-            // Draw the snake in the middle of the screen
-            int centerX = width * GameTile.Size / 2;
-            int centerY = length * GameTile.Size / 2;
-
-            for (int i = 0; i < GameTile.Snake.Length; i++)
-            {
-                int x = centerX - GameTile.Snake.Length * GameTile.Size / 2 + i * GameTile.Size;
-                int y = centerY;
-                State.Playfield[x / GameTile.Size, y / GameTile.Size] = GameTile.Snake;
-                g.FillRectangle(Brushes.White, x, y, GameTile.Size, GameTile.Size);
-            }
-
-            // Update the display
-            exp.Display.Update();
         }
-    }
 
         public GameState Tick(Keys input)
         {
-            //Move snake according to Keys input - implement snake movement here
+            // Move snake direction according to Keys input - implement snake movement here
+            switch (input)
+            {
+                case Keys.Up:
+                    State.Snake.Direction = Direction.Up;
+                    break;
+                case Keys.Down:
+                    State.Snake.Direction = Direction.Down;
+                    break;
+                case Keys.Left:
+                    State.Snake.Direction = Direction.Left;
+                    break;
+                case Keys.Right:
+                    State.Snake.Direction = Direction.Right;
+                    break;
+                default:
+                    break;
+            }
+
+            //get current position 
+            int currentHeadX = State.Snake.SnakePosition[0, 0];
+            int currentHeadY = State.Snake.SnakePosition[0, 1];
+
+            //init newHead and change according to position 
+            int newHeadX = currentHeadX;
+            int newHeadY = currentHeadY;
+            switch (State.Snake.Direction)
+            {
+                case Direction.Up:
+                    newHeadX = currentHeadX;
+                    newHeadY = currentHeadY - 1;
+                    break;
+                case Direction.Down:
+                    newHeadX = currentHeadX;
+                    newHeadY = currentHeadY + 1;
+                    break;
+                case Direction.Left:
+                    newHeadX = currentHeadX - 1;
+                    newHeadY = currentHeadY;
+                    break;
+                case Direction.Right:
+                    newHeadX = currentHeadX + 1;
+                    newHeadY = currentHeadY;
+                    break;
+                default:
+                    newHeadX = currentHeadX;
+                    newHeadY = currentHeadY;
+                    break;
+            }
+
+            //update position of newHead in the SnakePosition Array
+            State.Snake.SnakePosition[0, 0] = newHeadX;
+            State.Snake.SnakePosition[0, 1] = newHeadY;
+
+            //check if snake collides with wall and set GameOverState accordingly
+            if (newHeadX < 0 || newHeadX >= State.Playfield.GetLength(0) || newHeadY < 0 || newHeadY >= State.Playfield.GetLength(1))
+            {
+                State.SetGameOverState();
+            }
+
+            //check if snake collides / eats a fruit and increase store and generate a new fruit
+            if (newHeadX == State.Fruit.posX && newHeadY == State.Fruit.posY)
+            {
+                State.IncreaseScore();
+                Fruit newFruit = GenerateNewFruit(State.Playfield.GetLength(0), State.Playfield.GetLength(1), State.Snake);
+                State.SetFruit(newFruit);
+            }
+
+            return State;
+
         }
+
+        private Fruit GenerateNewFruit(int width, int length, Snake snake)
+        {
+            int maxAttempts = 10;
+            for (int attempt = 1; attempt <= maxAttempts; attempt++)
+            {
+                Fruit fruit = State.GenerateInitialFruit(width, length, snake);
+                bool fruitOnSnake = false;
+                for (int i = 0; i < snake.SnakePosition.Length; i++)
+                {
+                    if (snake.SnakePosition[i, 0] == fruit.posX && snake.SnakePosition[i, 1] == fruit.posY)
+                    {
+                        fruitOnSnake = true;
+                        break;
+                    }
+                }
+                if (!fruitOnSnake)
+                {
+                    return fruit;
+                }
+            }
+            // Return a default fruit if no valid fruit could be generated (which should not happen?) 
+            return new Fruit(0, 0);
+        }
+
     }
 }
 
