@@ -4,4 +4,5 @@
 *.editorconfig
 */obj/
 */bin/
+*.bkp
 project.assets.json
