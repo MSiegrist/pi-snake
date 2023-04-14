@@ -76,6 +76,7 @@ namespace App
             //check if snake collides with wall and set GameOverState accordingly
             if (newHeadX < 0 || newHeadX >= State.Playfield.GetLength(0) || newHeadY < 0 || newHeadY >= State.Playfield.GetLength(1))
             {
+                //sets gameOver = true in the GameState Class
                 State.SetGameOverState();
             }
 
@@ -91,6 +92,7 @@ namespace App
 
         }
 
+        //basically same code as GenerateInitialFruit from GameState
         private Fruit GenerateNewFruit(int width, int length, Snake snake)
         {
             int maxAttempts = 10;
