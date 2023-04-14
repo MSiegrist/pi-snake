@@ -23,10 +23,6 @@ namespace App
 
         public Fruit Fruit { get; private set; }
 
-        //Maybe add difficulty to GameState(int width, int length, bool difficultyEasy)? 
-        //public bool DifficultEasy { get; private set; }
-
-
         //GameTile Size score and GameOverState will be initialized here 
         //this method will be called in SnakeGame Class
         public GameState(int width, int length)
@@ -39,10 +35,10 @@ namespace App
             //Set initial Snake Position? --> Place it always in the middle
             int initialSnakeX = width / 2;
             int initialSnakeY = length / 2;
-            Snake = new Snake();
+            Snake = new Snake(initialSnakeX, initialSnakeY);
 
             //Set First Fruit
-            Fruit = GenerateInitialFruit(width, length);
+            Fruit = GenerateInitialFruit(width, length, Snake);
 
 
         }
@@ -57,30 +53,41 @@ namespace App
             GameOver = true;
         }
 
-        private Fruit GenerateInitialFruit(int width, int length)
+        public Fruit GenerateInitialFruit(int width, int length, Snake snake)
         {
             int fruitX;
             int fruitY;
             bool fruitOnSnake;
+            //simple error checking just in case 
+            int maxAttempts = 10;
 
-            do
+            for (int attempt = 1; attempt <= maxAttempts; attempt++)
             {
                 fruitX = new Random().Next(0, width);
                 fruitY = new Random().Next(0, length);
 
                 fruitOnSnake = false;
-                foreach (var segment in Snake.Segments)
+                for (int i = 0; i < snake.SnakePosition.Length; i++)
                 {
-                    if (segment.X == fruitX && segment.Y == fruitY)
+                    if (snake.SnakePosition[i, 0] == fruitX && snake.SnakePosition[i, 1] == fruitY)
                     {
                         fruitOnSnake = true;
                         break;
                     }
                 }
 
-            } while (fruitOnSnake);
+                if (!fruitOnSnake)
+                {
+                    return new Fruit(fruitX, fruitY);
+                }
+            }
+            // Return a default fruit if no valid fruit could be generated (which should not happen?) 
+            return new Fruit(0, 0);
+        }
 
-            return new Fruit(fruitX, fruitY);
+        public void SetFruit(Fruit fruit)
+        {
+            Fruit = fruit;
         }
 
     }
