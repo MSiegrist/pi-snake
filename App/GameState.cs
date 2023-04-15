@@ -22,12 +22,6 @@ namespace App
 
         public Snake Snake;
 
-        //Maybe add difficulty to GameState(int width, int length, bool difficultyEasy)? 
-        //public bool DifficultEasy { get; private set; }
-
-
-        //GameTile Size score and GameOverState will be initialized here 
-        //this method will be called in SnakeGame Class
         public GameState(int width, int length)
         {
             Playfield = new GameTile[width, length];
