@@ -18,7 +18,6 @@ namespace App
         {
             State = new GameState(width, length);
             GenerateFruit();
-            
         }
 
         public GameState Tick(Keys input)
@@ -26,6 +25,7 @@ namespace App
             //Move snake according to Keys input - implement snake movement here
             Snake snake = State.Snake;
 
+            // Correlate input to change on playfield grid
             int dirX = 0, dirY = 0;
             switch (input)
             {
@@ -42,40 +42,57 @@ namespace App
                     dirY = 1;
                     break;
             }
+
+            // Prevent 180 turn into self
             if ((snake.HeadingX == 0 || snake.HeadingX != -dirX) && (snake.HeadingY == 0 || snake.HeadingY != -dirY))
             {
+                // Move normally
                 snake.HeadingX = dirX;
                 snake.HeadingY = dirY;
-            } else
+            }
+            else
             {
+                // Use previous snake direction if input is opposite of moving direction (to not instantly eat yourself)
                 dirX = snake.HeadingX;
                 dirY = snake.HeadingY;
             }
+
+            // Calculate new position
             int newX = snake.HeadX + dirX;
             int newY = snake.HeadY + dirY;
+
+            // Detect border colission
             if (newX < 0 || newX >= State.Playfield.GetLength(0) || newY < 0 || newY >= State.Playfield.GetLength(1))
             {
                 // Out of bounds, perish
                 Console.WriteLine("Out of bounds");
                 State.GameOver = true;
+
                 return State;
             }
+
             var tileAtNewHead = State.Playfield[newX, newY];
             if (tileAtNewHead == GameTile.Snake)
             {
                 // Cannibalism is illegal
                 Console.WriteLine("Ate itself");
                 State.GameOver = true;
+
                 return State;
-            } else if (tileAtNewHead == GameTile.Fruit)
+            }
+            else if (tileAtNewHead == GameTile.Fruit)
             {
+                // Ate a fruit
                 State.AteFruit();
                 GenerateFruit();
                 State.Playfield[newX, newY] = GameTile.None;
             }
 
-            var assToRemove = snake.MoveTo(newX, newY);
+            // Add snake head to playfield
             State.Playfield[newX, newY] = GameTile.Snake;
+
+            // Remove tail of snake if required
+            var assToRemove = snake.MoveTo(newX, newY);
             if (assToRemove != null)
             {
                 State.Playfield[assToRemove.Value.X, assToRemove.Value.Y] = GameTile.None;
