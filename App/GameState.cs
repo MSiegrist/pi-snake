@@ -27,9 +27,8 @@ namespace App
             Playfield = new GameTile[width, length];
             Score = 0;
             GameOver = false;
-            //DifficultyEasy = difficultyEasy
 
-            //Set initial Snake Position? --> Place it always in the middle
+            // Set initial Snake Position to the middle of the playfield
             int initialSnakeX = width / 2;
             int initialSnakeY = length / 2;
             Snake = new Snake { HeadX = initialSnakeX, HeadY = initialSnakeY };

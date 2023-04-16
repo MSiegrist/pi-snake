@@ -43,7 +43,7 @@ namespace App
                     break;
             }
 
-            // Prevent 180 turn into self
+            // Prevent 180 degree turn into self
             if ((snake.HeadingX == 0 || snake.HeadingX != -dirX) && (snake.HeadingY == 0 || snake.HeadingY != -dirY))
             {
                 // Move normally
