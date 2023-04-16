@@ -10,7 +10,7 @@ namespace App
 {
     internal class App
     {
-        private SnakeGame game = new SnakeGame(21, 10);
+        private SnakeGame game = new SnakeGame(20, 9);
         private const int tileSize = 6;
         private Keys lastInput = Keys.Left;
         private Explorer700 explorer;
@@ -53,7 +53,7 @@ namespace App
             graphics.Clear(Color.Black);
 
             // Draw playfield borders
-            graphics.DrawRectangle(pen, new Rectangle(0, 0, width * tileSize, height * tileSize));
+            graphics.DrawRectangle(pen, new Rectangle(0, 0, width * tileSize + 4, height * tileSize + 4));
 
             // Draw playfield contents
             for (int x = 0; x < width; x++)
@@ -61,13 +61,14 @@ namespace App
                 for (int y = 0; y < height; y++)
                 {
                     GameTile tile = gameState.Playfield[x, y];
+                    Rectangle tileRectangle = new Rectangle(x * tileSize + 2, y * tileSize + 2, tileSize, tileSize);
                     if (tile == GameTile.Snake)
                     {
-                        graphics.FillRectangle(brush, new Rectangle(x * tileSize, y * tileSize, tileSize, tileSize));
+                        graphics.FillRectangle(brush, tileRectangle);
                     }
                     else if (tile == GameTile.Fruit)
                     {
-                        graphics.FillPie(brush, new Rectangle(x * tileSize, y * tileSize, tileSize, tileSize), 0, 360);
+                        graphics.FillPie(brush, tileRectangle, 0, 360);
                     }
                 }
             }
