@@ -1,4 +1,5 @@
-﻿using System;
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,26 +17,31 @@ namespace App
 
     internal class Snake
     {
-        public int[,] SnakePosition { get; }
-        private Direction direction;
+        public int HeadX, HeadY;
+        public int HeadingX, HeadingY;
+        private readonly Queue<SnakePart> parts = new();
+        private int length = 3;
 
-        public Snake(int startX, int startY)
+        public SnakePart? MoveTo(int newX, int newY)
         {
-            //initialize SnakePosition
-            SnakePosition = new int[1, 2];
-
-            //Set actual position of snake 
-            SnakePosition[0, 0] = startX;
-            SnakePosition[0, 1] = startY;
-
-            //Set initial direction to left
-            direction = Direction.Left;
+            HeadX = newX;
+            HeadY = newY;
+            parts.Enqueue(new SnakePart { X = newX, Y = newY });
+            if (parts.Count > length)
+            {
+                return parts.Dequeue();
+            }
+            return null;
         }
 
-        public Direction Direction
+        public void Grow()
         {
-            get { return direction; }
-            set { direction = value; }
+            length++;
         }
+    }
+
+    struct SnakePart
+    {
+        public int X, Y;
     }
 }

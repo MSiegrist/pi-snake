@@ -1,10 +1,12 @@
-﻿using Explorer700Library;
+
+using Explorer700Library;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnitsNet;
 
 namespace App
 {
@@ -15,108 +17,105 @@ namespace App
         public SnakeGame(int width, int length)
         {
             State = new GameState(width, length);
+            GenerateFruit();
         }
 
         public GameState Tick(Keys input)
         {
-            // Move snake direction according to Keys input - implement snake movement here
+            //Move snake according to Keys input - implement snake movement here
+            Snake snake = State.Snake;
+
+            // Correlate input to change on playfield grid
+            int dirX = 0, dirY = 0;
             switch (input)
             {
-                case Keys.Up:
-                    State.Snake.Direction = Direction.Up;
-                    break;
-                case Keys.Down:
-                    State.Snake.Direction = Direction.Down;
-                    break;
                 case Keys.Left:
-                    State.Snake.Direction = Direction.Left;
+                    dirX = -1;
                     break;
                 case Keys.Right:
-                    State.Snake.Direction = Direction.Right;
+                    dirX = 1;
                     break;
-                default:
+                case Keys.Up:
+                    dirY = -1;
                     break;
-            }
-
-            //get current position 
-            int currentHeadX = State.Snake.SnakePosition[0, 0];
-            int currentHeadY = State.Snake.SnakePosition[0, 1];
-
-            //init newHead and change according to position 
-            int newHeadX = currentHeadX;
-            int newHeadY = currentHeadY;
-            switch (State.Snake.Direction)
-            {
-                case Direction.Up:
-                    newHeadX = currentHeadX;
-                    newHeadY = currentHeadY - 1;
-                    break;
-                case Direction.Down:
-                    newHeadX = currentHeadX;
-                    newHeadY = currentHeadY + 1;
-                    break;
-                case Direction.Left:
-                    newHeadX = currentHeadX - 1;
-                    newHeadY = currentHeadY;
-                    break;
-                case Direction.Right:
-                    newHeadX = currentHeadX + 1;
-                    newHeadY = currentHeadY;
-                    break;
-                default:
-                    newHeadX = currentHeadX;
-                    newHeadY = currentHeadY;
+                case Keys.Down:
+                    dirY = 1;
                     break;
             }
 
-            //update position of newHead in the SnakePosition Array
-            State.Snake.SnakePosition[0, 0] = newHeadX;
-            State.Snake.SnakePosition[0, 1] = newHeadY;
-
-            //check if snake collides with wall and set GameOverState accordingly
-            if (newHeadX < 0 || newHeadX >= State.Playfield.GetLength(0) || newHeadY < 0 || newHeadY >= State.Playfield.GetLength(1))
+            // Prevent 180 turn into self
+            if ((snake.HeadingX == 0 || snake.HeadingX != -dirX) && (snake.HeadingY == 0 || snake.HeadingY != -dirY))
             {
-                //sets gameOver = true in the GameState Class
-                State.SetGameOverState();
+                // Move normally
+                snake.HeadingX = dirX;
+                snake.HeadingY = dirY;
+            }
+            else
+            {
+                // Use previous snake direction if input is opposite of moving direction (to not instantly eat yourself)
+                dirX = snake.HeadingX;
+                dirY = snake.HeadingY;
             }
 
-            //check if snake collides / eats a fruit and increase store and generate a new fruit
-            if (newHeadX == State.Fruit.posX && newHeadY == State.Fruit.posY)
+            // Calculate new position
+            int newX = snake.HeadX + dirX;
+            int newY = snake.HeadY + dirY;
+
+            // Detect border colission
+            if (newX < 0 || newX >= State.Playfield.GetLength(0) || newY < 0 || newY >= State.Playfield.GetLength(1))
             {
-                State.IncreaseScore();
-                Fruit newFruit = GenerateNewFruit(State.Playfield.GetLength(0), State.Playfield.GetLength(1), State.Snake);
-                State.SetFruit(newFruit);
+                // Out of bounds, perish
+                Console.WriteLine("Out of bounds");
+                State.GameOver = true;
+
+                return State;
+            }
+
+            var tileAtNewHead = State.Playfield[newX, newY];
+            if (tileAtNewHead == GameTile.Snake)
+            {
+                // Cannibalism is illegal
+                Console.WriteLine("Ate itself");
+                State.GameOver = true;
+
+                return State;
+            }
+            else if (tileAtNewHead == GameTile.Fruit)
+            {
+                // Ate a fruit
+                State.AteFruit();
+                GenerateFruit();
+                State.Playfield[newX, newY] = GameTile.None;
+            }
+
+            // Add snake head to playfield
+            State.Playfield[newX, newY] = GameTile.Snake;
+
+            // Remove tail of snake if required
+            var assToRemove = snake.MoveTo(newX, newY);
+            if (assToRemove != null)
+            {
+                State.Playfield[assToRemove.Value.X, assToRemove.Value.Y] = GameTile.None;
             }
 
             return State;
-
         }
 
-        //basically same code as GenerateInitialFruit from GameState
-        private Fruit GenerateNewFruit(int width, int length, Snake snake)
+        private void GenerateFruit()
         {
-            int maxAttempts = 10;
-            for (int attempt = 1; attempt <= maxAttempts; attempt++)
+            for (int i = 0; i < 100; i++)
             {
-                Fruit fruit = State.GenerateInitialFruit(width, length, snake);
-                bool fruitOnSnake = false;
-                for (int i = 0; i < snake.SnakePosition.Length; i++)
+                int fruitX = new Random().Next(0, State.Playfield.GetLength(0));
+                int fruitY = new Random().Next(0, State.Playfield.GetLength(1));
+
+                if (State.Playfield[fruitX, fruitY] == GameTile.None)
                 {
-                    if (snake.SnakePosition[i, 0] == fruit.posX && snake.SnakePosition[i, 1] == fruit.posY)
-                    {
-                        fruitOnSnake = true;
-                        break;
-                    }
-                }
-                if (!fruitOnSnake)
-                {
-                    return fruit;
+                    State.Playfield[fruitX, fruitY] = GameTile.Fruit;
+                    return;
                 }
             }
-            // Return a default fruit if no valid fruit could be generated (which should not happen?) 
-            return new Fruit(0, 0);
+            throw new Exception("Could not place fruit, aborting");
         }
 
     }
 }
-
