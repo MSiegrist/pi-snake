@@ -65,7 +65,7 @@ namespace App
             if (newX < 0 || newX >= State.Playfield.GetLength(0) || newY < 0 || newY >= State.Playfield.GetLength(1))
             {
                 // Out of bounds, perish
-                Console.WriteLine("Out of bounds");
+                Console.WriteLine("Game Over: Hit the border");
                 State.GameOver = true;
 
                 return State;
@@ -75,7 +75,7 @@ namespace App
             if (tileAtNewHead == GameTile.Snake)
             {
                 // Cannibalism is illegal
-                Console.WriteLine("Ate itself");
+                Console.WriteLine("Game Over: Ate itself");
                 State.GameOver = true;
 
                 return State;

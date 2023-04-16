@@ -30,6 +30,7 @@ namespace App
                 UpdateDisplay(gameState);
                 Thread.Sleep(500);
             }
+            Console.WriteLine($"FINAL SCORE: {game.State.Score}");
             Thread.Sleep(5000);
         }
 
