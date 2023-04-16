@@ -7,6 +7,14 @@ using System.Threading.Tasks;
 
 namespace App
 {
+    internal enum Direction
+    {
+        Up,
+        Down,
+        Left,
+        Right
+    }
+
     internal class Snake
     {
         public int HeadX, HeadY;

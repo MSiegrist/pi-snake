@@ -8,7 +8,14 @@ namespace App
 {
     internal class Fruit
     {
-        int posX; 
-        int posY;
+        public int posX { get; private set; }
+        public int posY { get; private set; }
+
+        public Fruit(int x, int y)
+        {
+            posX = x;
+            posY = y;
+        }
     }
+
 }
