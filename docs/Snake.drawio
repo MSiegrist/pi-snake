@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2023-04-03T09:48:33.781Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="a26BhPuHDfaCW-kde359" version="21.1.2" type="device" pages="2">
+<mxfile host="Electron" modified="2023-04-15T18:53:07.819Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="we8G9iH34j6LuQ_CdUhr" version="21.1.2" type="device" pages="3">
   <diagram name="Sequenz" id="B21jgjWOHXaZNQW184HR">
-    <mxGraphModel dx="1050" dy="629" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+    <mxGraphModel dx="1036" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="pCA_wMGK8luPxstzmgIP-48" value="Hintergrund" style="" parent="0" />
@@ -131,6 +131,145 @@
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="220" y="840" as="sourcePoint" />
             <mxPoint x="120" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Sequenz Kompakt" id="eBAL39gOa7BkdOEDHhXS">
+    <mxGraphModel dx="875" dy="524" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="wgvP8SeVkhier-gyu7ik-0" />
+        <mxCell id="wgvP8SeVkhier-gyu7ik-1" value="Hintergrund" style="" parent="wgvP8SeVkhier-gyu7ik-0" />
+        <mxCell id="wgvP8SeVkhier-gyu7ik-2" value="Game Loop" style="rounded=0;whiteSpace=wrap;html=1;fillStyle=hatch;fillColor=#BDD0FC;dashed=1;dashPattern=8 8;horizontal=0;spacingLeft=0;spacingTop=0;align=center;verticalAlign=top;strokeColor=#6c8ebf;labelBackgroundColor=default;" vertex="1" parent="wgvP8SeVkhier-gyu7ik-1">
+          <mxGeometry y="180" width="490" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="TJPE7He3mfhfnsK9eFvk-0" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#1A1A1A;shadow=0;dashed=0;shape=mxgraph.ios7.icons.reload;rotation=-90;" vertex="1" parent="wgvP8SeVkhier-gyu7ik-1">
+          <mxGeometry x="10" y="200" width="8.89" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="wgvP8SeVkhier-gyu7ik-4" value="Diagram" parent="wgvP8SeVkhier-gyu7ik-0" />
+        <mxCell id="wgvP8SeVkhier-gyu7ik-5" value="Gamer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="wgvP8SeVkhier-gyu7ik-4">
+          <mxGeometry x="40" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wgvP8SeVkhier-gyu7ik-6" value="" style="endArrow=none;dashed=1;html=1;rounded=0;targetPerimeterSpacing=11;startArrow=none;" edge="1" parent="wgvP8SeVkhier-gyu7ik-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="60" y="440" as="sourcePoint" />
+            <mxPoint x="60" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wgvP8SeVkhier-gyu7ik-7" value="App" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="wgvP8SeVkhier-gyu7ik-4">
+          <mxGeometry x="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wgvP8SeVkhier-gyu7ik-8" value="SnakeGame" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="wgvP8SeVkhier-gyu7ik-4">
+          <mxGeometry x="360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wgvP8SeVkhier-gyu7ik-9" value="" style="endArrow=none;dashed=1;html=1;rounded=0;sourcePerimeterSpacing=50;targetPerimeterSpacing=11;" edge="1" parent="wgvP8SeVkhier-gyu7ik-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="220" y="440" as="sourcePoint" />
+            <mxPoint x="220" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wgvP8SeVkhier-gyu7ik-10" value="" style="endArrow=none;dashed=1;html=1;rounded=0;targetPerimeterSpacing=11;startArrow=none;" edge="1" parent="wgvP8SeVkhier-gyu7ik-4" source="wgvP8SeVkhier-gyu7ik-17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="880" as="sourcePoint" />
+            <mxPoint x="420" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wgvP8SeVkhier-gyu7ik-12" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="wgvP8SeVkhier-gyu7ik-4">
+          <mxGeometry x="50" y="110" width="20" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="wgvP8SeVkhier-gyu7ik-13" value="Start Game" style="endArrow=classic;html=1;rounded=0;sourcePerimeterSpacing=50;targetPerimeterSpacing=11;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wgvP8SeVkhier-gyu7ik-4" source="wgvP8SeVkhier-gyu7ik-12" target="wgvP8SeVkhier-gyu7ik-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="260" as="sourcePoint" />
+            <mxPoint x="350" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wgvP8SeVkhier-gyu7ik-14" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="wgvP8SeVkhier-gyu7ik-4">
+          <mxGeometry x="210" y="110" width="21.38" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="wgvP8SeVkhier-gyu7ik-15" value="new SnakeGame()" style="endArrow=classic;html=1;rounded=0;sourcePerimeterSpacing=50;targetPerimeterSpacing=11;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wgvP8SeVkhier-gyu7ik-4" target="wgvP8SeVkhier-gyu7ik-17">
+          <mxGeometry x="-0.0018" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="119" as="sourcePoint" />
+            <mxPoint x="719" y="117" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wgvP8SeVkhier-gyu7ik-16" value="" style="endArrow=none;dashed=1;html=1;rounded=0;startArrow=none;" edge="1" parent="wgvP8SeVkhier-gyu7ik-4" source="wgvP8SeVkhier-gyu7ik-21" target="wgvP8SeVkhier-gyu7ik-17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="829" as="sourcePoint" />
+            <mxPoint x="420" y="29" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wgvP8SeVkhier-gyu7ik-17" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="wgvP8SeVkhier-gyu7ik-4">
+          <mxGeometry x="410" y="119" width="20" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="wgvP8SeVkhier-gyu7ik-18" value="SnakeGame instance" style="endArrow=classic;html=1;rounded=0;sourcePerimeterSpacing=50;targetPerimeterSpacing=11;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.961;entryY=0.168;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="wgvP8SeVkhier-gyu7ik-4" source="wgvP8SeVkhier-gyu7ik-17" target="wgvP8SeVkhier-gyu7ik-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="880" y="189" as="sourcePoint" />
+            <mxPoint x="240" y="159" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wgvP8SeVkhier-gyu7ik-19" value="Tick(Input)" style="endArrow=classic;html=1;rounded=0;sourcePerimeterSpacing=50;targetPerimeterSpacing=11;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=1.064;exitY=0.31;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="wgvP8SeVkhier-gyu7ik-4" target="wgvP8SeVkhier-gyu7ik-21" source="wgvP8SeVkhier-gyu7ik-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="200" as="sourcePoint" />
+            <mxPoint x="729" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wgvP8SeVkhier-gyu7ik-20" value="" style="endArrow=none;dashed=1;html=1;rounded=0;sourcePerimeterSpacing=50;" edge="1" parent="wgvP8SeVkhier-gyu7ik-4" target="wgvP8SeVkhier-gyu7ik-21">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="440" as="sourcePoint" />
+            <mxPoint x="420" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wgvP8SeVkhier-gyu7ik-21" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="wgvP8SeVkhier-gyu7ik-4">
+          <mxGeometry x="410" y="200" width="20" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="wgvP8SeVkhier-gyu7ik-22" value="Game State" style="endArrow=classic;html=1;rounded=0;sourcePerimeterSpacing=50;targetPerimeterSpacing=11;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1.039;entryY=0.449;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="wgvP8SeVkhier-gyu7ik-4" source="wgvP8SeVkhier-gyu7ik-21" target="wgvP8SeVkhier-gyu7ik-14">
+          <mxGeometry x="0.0395" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="360" as="sourcePoint" />
+            <mxPoint x="240" y="240" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wgvP8SeVkhier-gyu7ik-23" value="Draw Game State" style="endArrow=classic;html=1;rounded=0;sourcePerimeterSpacing=50;targetPerimeterSpacing=11;entryX=1.12;entryY=0.525;entryDx=0;entryDy=0;entryPerimeter=0;exitX=-0.115;exitY=0.52;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="wgvP8SeVkhier-gyu7ik-4" source="wgvP8SeVkhier-gyu7ik-14">
+          <mxGeometry x="0.0014" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="206.7929999999999" y="260.9000000000001" as="sourcePoint" />
+            <mxPoint x="72.40000000000009" y="260" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wgvP8SeVkhier-gyu7ik-24" value="Joystick Input" style="endArrow=classic;html=1;rounded=0;sourcePerimeterSpacing=50;targetPerimeterSpacing=11;entryX=-0.15;entryY=0.649;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="wgvP8SeVkhier-gyu7ik-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="73.21" y="300.07" as="sourcePoint" />
+            <mxPoint x="210.0029999999999" y="300.00000000000006" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wgvP8SeVkhier-gyu7ik-25" value="Tick(Input)" style="endArrow=classic;html=1;rounded=0;sourcePerimeterSpacing=50;targetPerimeterSpacing=11;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=1.045;exitY=0.794;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="wgvP8SeVkhier-gyu7ik-4" target="wgvP8SeVkhier-gyu7ik-26" source="wgvP8SeVkhier-gyu7ik-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="340" as="sourcePoint" />
+            <mxPoint x="729" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wgvP8SeVkhier-gyu7ik-26" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="wgvP8SeVkhier-gyu7ik-4">
+          <mxGeometry x="410" y="340" width="20" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="wgvP8SeVkhier-gyu7ik-27" value="Game State (Game Over)" style="endArrow=classic;html=1;rounded=0;sourcePerimeterSpacing=50;targetPerimeterSpacing=11;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.995;entryY=0.931;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="wgvP8SeVkhier-gyu7ik-4" source="wgvP8SeVkhier-gyu7ik-26" target="wgvP8SeVkhier-gyu7ik-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="500" as="sourcePoint" />
+            <mxPoint x="236" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wgvP8SeVkhier-gyu7ik-28" value="End Game Screen" style="endArrow=classic;html=1;rounded=0;sourcePerimeterSpacing=50;targetPerimeterSpacing=11;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.966;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="wgvP8SeVkhier-gyu7ik-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="400.0599999999991" as="sourcePoint" />
+            <mxPoint x="70" y="400.00000000000006" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TJPE7He3mfhfnsK9eFvk-1" value="new SnakeGame()" style="endArrow=classic;html=1;rounded=0;sourcePerimeterSpacing=50;targetPerimeterSpacing=11;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=1.064;exitY=0.031;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="wgvP8SeVkhier-gyu7ik-4" source="wgvP8SeVkhier-gyu7ik-14" target="wgvP8SeVkhier-gyu7ik-17">
+          <mxGeometry x="-0.0018" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="119" as="sourcePoint" />
+            <mxPoint x="719" y="117" as="targetPoint" />
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
