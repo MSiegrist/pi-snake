@@ -10,8 +10,8 @@ namespace App
 {
     internal class App
     {
-        private SnakeGame game = new SnakeGame(25, 12);
-        private const int tileSize = 5;
+        private SnakeGame game = new SnakeGame(21, 10);
+        private const int tileSize = 6;
         private Keys lastInput = Keys.Left;
         private Explorer700 explorer;
         static readonly Keys[] CARDINAL_DIRECTIONS = new[] { Keys.Left, Keys.Right, Keys.Up, Keys.Down };
