@@ -13,13 +13,16 @@ namespace App
         private SnakeGame game = new SnakeGame(20, 9);
         private const int tileSize = 6;
         private Keys lastInput = Keys.Left;
-        private Explorer700 explorer;
+        private readonly Explorer700 explorer;
         static readonly Keys[] CARDINAL_DIRECTIONS = new[] { Keys.Left, Keys.Right, Keys.Up, Keys.Down };
 
+        public App() 
+        {
+            explorer = new Explorer700();
+        }
 
         public void Run()
         {
-            explorer = new Explorer700();
             explorer.Joystick.JoystickChanged += JoystickChanged;
             while (!game.State.GameOver)
             {
