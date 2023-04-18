@@ -39,5 +39,10 @@ namespace App
             Score++;
             Snake.Grow();
         }
+
+        public bool IsFull()
+        {
+            return Playfield.Length <= Snake.Length;
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace App
         private readonly Explorer700 explorer;
         static readonly Keys[] CARDINAL_DIRECTIONS = new[] { Keys.Left, Keys.Right, Keys.Up, Keys.Down };
 
-        public App() 
+        public App()
         {
             explorer = new Explorer700();
         }
@@ -47,7 +47,7 @@ namespace App
         private void UpdateDisplay(GameState gameState)
         {
             Graphics graphics = explorer.Display.Graphics;
-            
+
             Pen pen = new Pen(Brushes.White);
             Brush brush = new SolidBrush(Color.White);
             int width = gameState.Playfield.GetLength(0);
@@ -79,12 +79,22 @@ namespace App
 
             if (gameState.GameOver)
             {
-                string gameOverText = $"Game Over\nScore: {gameState.Score}";
+                string? endScreenText;
+                if (gameState.IsFull())
+                {
+                    // Show Win screen
+                    endScreenText = $"You Win!\nScore: {gameState.Score}";
+                }
+                else
+                {
+                    // Show Game Over screen
+                    endScreenText = $"Game Over!\nScore: {gameState.Score}";
+                }
                 PointF textPosition = new PointF(2, 5);
                 Font font = new Font(new FontFamily("arial"), 15, FontStyle.Bold);
-                SizeF fontSpace = graphics.MeasureString(gameOverText, font);
+                SizeF fontSpace = graphics.MeasureString(endScreenText, font);
                 graphics.FillRectangle(new SolidBrush(Color.Black), textPosition.X, textPosition.Y, fontSpace.Width, fontSpace.Height);
-                graphics.DrawString(gameOverText, font, Brushes.White, textPosition);
+                graphics.DrawString(endScreenText, font, Brushes.White, textPosition);
             }
 
             explorer.Display.Update();

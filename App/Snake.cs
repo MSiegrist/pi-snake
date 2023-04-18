@@ -20,14 +20,14 @@ namespace App
         public int HeadX, HeadY;
         public int HeadingX, HeadingY;
         private readonly Queue<SnakePart> parts = new();
-        private int length = 3;
+        public int Length { get; private set; } = 3;
 
         public SnakePart? MoveTo(int newX, int newY)
         {
             HeadX = newX;
             HeadY = newY;
             parts.Enqueue(new SnakePart { X = newX, Y = newY });
-            if (parts.Count > length)
+            if (parts.Count > Length)
             {
                 return parts.Dequeue();
             }
@@ -36,7 +36,7 @@ namespace App
 
         public void Grow()
         {
-            length++;
+            Length++;
         }
     }
 

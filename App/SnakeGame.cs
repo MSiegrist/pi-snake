@@ -71,6 +71,7 @@ namespace App
                 return State;
             }
 
+            // Detect snake bites
             var tileAtNewHead = State.Playfield[newX, newY];
             if (tileAtNewHead == GameTile.Snake)
             {
@@ -80,11 +81,23 @@ namespace App
 
                 return State;
             }
-            else if (tileAtNewHead == GameTile.Fruit)
+
+            // Detect fruit being eaten
+            if (tileAtNewHead == GameTile.Fruit)
             {
                 // Ate a fruit
                 State.AteFruit();
-                GenerateFruit();
+                if (State.IsFull())
+                {
+                    // No more space to place a new fruit
+                    Console.WriteLine("Game WIN: Playfield is full");
+                    State.GameOver = true;
+                    // Do not return early so snake moves onto the final field
+                }
+                else
+                {
+                    GenerateFruit();
+                }
                 State.Playfield[newX, newY] = GameTile.None;
             }
 
