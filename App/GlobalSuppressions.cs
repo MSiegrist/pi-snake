@@ -6,3 +6,4 @@
 using System.Diagnostics.CodeAnalysis;
 
 [assembly: SuppressMessage("Interoperability", "CA1416:Validate platform compatibility", Justification = "<Ausstehend>", Scope = "member", Target = "~M:App.App.UpdateDisplay(App.GameState)")]
+[assembly: SuppressMessage("Interoperability", "CA1416:Validate platform compatibility", Justification = "<Ausstehend>", Scope = "member", Target = "~M:App.App.DrawEndScreen(App.GameState)")]
