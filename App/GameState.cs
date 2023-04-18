@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 
 namespace App
 {
-    /*
-    The GameState class represents the current state of the game and keeps
-    track of the playfield, score and gameOver State (bool) 
-    */
-
+    /// <summary>
+    /// The GameState class represents the current state of the game and keeps 
+    /// track of the playfield, score and gameOver State(bool)
+    /// </summary>
     internal class GameState
     {
         public GameTile[,] Playfield { get; }
