@@ -58,7 +58,7 @@ namespace App
             if (newX < 0 || newX >= State.Playfield.GetLength(0) || newY < 0 || newY >= State.Playfield.GetLength(1))
             {
                 // Out of bounds, perish
-                Console.WriteLine("Game Over: Hit the border");
+                Logger.Log("Game Over: Hit the border");
                 State.GameOver = true;
 
                 return State;
@@ -69,7 +69,7 @@ namespace App
             if (tileAtNewHead == GameTile.Snake)
             {
                 // Cannibalism is illegal
-                Console.WriteLine("Game Over: Ate itself");
+                Logger.Log("Game Over: Ate itself");
                 State.GameOver = true;
 
                 return State;
@@ -83,7 +83,7 @@ namespace App
                 if (State.IsFull())
                 {
                     // No more space to place a new fruit
-                    Console.WriteLine("Game WIN: Playfield is full");
+                    Logger.Log("Game WIN: Playfield is full");
                     State.GameOver = true;
                     // Do not return early so snake moves onto the final field
                 }

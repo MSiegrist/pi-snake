@@ -1,5 +1,6 @@
 ﻿using Explorer700Library;
 using System.Drawing;
+using UnitsNet;
 
 namespace App
 {
@@ -14,18 +15,23 @@ namespace App
         public App()
         {
             explorer = new Explorer700();
+            Logger.Initialize();
         }
 
         public void Run()
         {
+            Logger.Log("New Game Started");
             explorer.Joystick.JoystickChanged += JoystickChanged;
             while (!game.State.GameOver)
             {
                 GameState gameState = game.Tick(lastInput);
                 UpdateDisplay(gameState);
+                Logger.WriteToFile();
                 Thread.Sleep(500);
             }
-            Console.WriteLine($"FINAL SCORE: {game.State.Score}");
+            Logger.Log($"FINAL SCORE: {game.State.Score}");
+            Logger.WriteToFile();
+            explorer.Joystick.JoystickChanged -= JoystickChanged;
             Thread.Sleep(5000);
         }
 
@@ -36,6 +42,10 @@ namespace App
             if (direction != Keys.NoKey)
             {
                 lastInput = direction;
+            }
+            // Check if only one key is set
+            if ((e.Keys & (e.Keys - 1)) == 0 && e.Keys != 0) {
+                Logger.Log($"Joystick: {e.Keys}");
             }
         }
 
