@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Explorer700Library\Explorer700Library.csproj" />
+    <ProjectReference Include="..\SimpleHttpServer\SimpleHttpServer.csproj" />
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">

@@ -3,16 +3,22 @@ using System.Net.Sockets;
 using System.IO;
 using System.Threading;
 
-namespace SimpleHttpServer {
+namespace SimpleHttpServer
+{
 
-    public class SimpleHttpServer {
+    public class SimpleHttpServer
+    {
         public static string fileName;
-        public static void Main() {
-            fileName = "snake.log";
-            Console.WriteLine("SimpleHttpServer startet...");
+        public static void Main()
+        {
+            //Projektverzeichnis 
+            string projectDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
+            SimpleHttpServer.fileName = projectDirectory + "/snake.log";
+            Console.WriteLine("SimpleHttpServer startet...", projectDirectory);
             TcpListener listener = new TcpListener(8080);
             listener.Start();
-            while(true) {
+            while (true)
+            {
                 TcpClient client = listener.AcceptTcpClient();
                 Thread handler = new Thread(new HttpHandler(client).Do);
                 handler.Start();

@@ -7,20 +7,16 @@ namespace App
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, to snake game!");
-            StartWebserver();
+            Console.WriteLine("Hello to the snake game!");
+
+            // Start the HTTP server in a new thread
+            Thread httpServerThread = new Thread(SimpleHttpServer.SimpleHttpServer.Main);
+            httpServerThread.Start();
+
             while (true)
             {
                 new App().Run();
             }
-        }
-
-        static void StartWebserver()
-        {
-            Process webServer = new Process();
-            webServer.StartInfo.FileName = "dotnet";
-            webServer.StartInfo.Arguments = "/home/marc/netcore/SimpleHttpServer/SimpleHttpServer.dll";
-            webServer.Start();
         }
     }
 }

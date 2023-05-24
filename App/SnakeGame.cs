@@ -24,21 +24,35 @@ namespace App
             {
                 case Keys.Left:
                     dirX = -1;
+                    //Logger.Log("Joystick: Left: ");
                     break;
                 case Keys.Right:
                     dirX = 1;
+                    //Logger.Log("Joystick: Right: ");
                     break;
                 case Keys.Up:
                     dirY = -1;
+                    //Logger.Log("Joystick: Up: ");
                     break;
                 case Keys.Down:
                     dirY = 1;
+                    //Logger.Log("Joystick: Down: ");
                     break;
             }
+
+            bool directionChanged = false;
 
             // Prevent 180 degree turn into self
             if ((snake.HeadingX == 0 || snake.HeadingX != -dirX) && (snake.HeadingY == 0 || snake.HeadingY != -dirY))
             {
+                //only log input if it changes the snake's direction
+                if (dirX != 0 || dirY != 0)
+                {
+                    string joystickDirection = GetDirectionText(dirX, dirY);
+                    Logger.Log($"Joystick: {joystickDirection}: ");
+                    directionChanged = true;
+                }
+
                 // Move normally
                 snake.HeadingX = dirX;
                 snake.HeadingY = dirY;
@@ -58,6 +72,7 @@ namespace App
             if (newX < 0 || newX >= State.Playfield.GetLength(0) || newY < 0 || newY >= State.Playfield.GetLength(1))
             {
                 // Out of bounds, perish
+                Console.WriteLine("Game Over: Hit the border");
                 Logger.Log("Game Over: Hit the border");
                 State.GameOver = true;
 
@@ -69,7 +84,8 @@ namespace App
             if (tileAtNewHead == GameTile.Snake)
             {
                 // Cannibalism is illegal
-                Logger.Log("Game Over: Ate itself");
+                Console.WriteLine("Game Over: Ate itself");
+                Logger.Log("Game Over: Ate ifself");
                 State.GameOver = true;
 
                 return State;
@@ -83,6 +99,7 @@ namespace App
                 if (State.IsFull())
                 {
                     // No more space to place a new fruit
+                    Console.WriteLine("Game WIN: Playfield is full");
                     Logger.Log("Game WIN: Playfield is full");
                     State.GameOver = true;
                     // Do not return early so snake moves onto the final field
@@ -104,6 +121,11 @@ namespace App
                 State.Playfield[assToRemove.Value.X, assToRemove.Value.Y] = GameTile.None;
             }
 
+            if (!directionChanged)
+            {
+                Logger.ClearLastLog();
+            }
+
             return State;
         }
 
@@ -123,5 +145,18 @@ namespace App
             throw new Exception("Could not place fruit, aborting");
         }
 
+        private string GetDirectionText(int dirX, int dirY)
+        {
+            if (dirX == -1)
+                return "Left";
+            if (dirX == 1)
+                return "Right";
+            if (dirY == -1)
+                return "Up";
+            if (dirY == 1)
+                return "Down";
+
+            return "No direction";
+        }
     }
 }
