@@ -19,7 +19,7 @@ namespace App
         {
             Process webServer = new Process();
             webServer.StartInfo.FileName = "dotnet";
-            webServer.StartInfo.Arguments = "/home/marc/netcore/SimpleHttpServer/SimpleHttpServer.dll";
+            webServer.StartInfo.Arguments = "../SimpleHttpServer/SimpleHttpServer.dll";
             webServer.Start();
         }
     }
